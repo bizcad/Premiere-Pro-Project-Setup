@@ -1,15 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Premiere_Pro_Project_Setup
 {
+    /// <summary>
+    /// Provides a factory for creating date strings for file names.
+    /// </summary>
     public static class FileDateFactory
     {
         private const char zero = '0';
         private const char underscore = '_';
+
+        /// <summary>
+        /// Creates a date string in the format YYYYMMDD[_HHMMSS] from a DateTime object.
+        /// </summary>
+        /// <param name="dt">The DateTime object to convert to a string.</param>
+        /// <param name="includeHMS">Whether to include the hour, minute, and second in the date string.</param>
+        /// <returns>A date string in the format YYYYMMDD[_HHMMSS].</returns>
         public static string Create(DateTime dt, bool includeHMS)
         {
             StringBuilder sb = new();
@@ -39,3 +45,4 @@ namespace Premiere_Pro_Project_Setup
         }
     }
 }
+

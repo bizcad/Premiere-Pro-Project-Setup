@@ -1,5 +1,25 @@
+/*
+ * 
+ * This file is part of the Premiere Pro Project Setup project.
+ *
+ * Written by: Nicholas Stein
+ * Date: 2024-05-15
+ * 
+ * Purpose: This file contains the Form1 form class which represents the main form of the Premiere Pro Project Setup application.
+ * 
+ * Change log:
+ * 
+ * Date           Programmer          Change
+ * 2024-05-15   Nicholas Stein      Added the ProjectSubFoldersFactory class.
+ * 
+ */
+
+
 namespace Premiere_Pro_Project_Setup
 {
+    /// <summary>
+    /// Represents the main form of the Premiere Pro Project Setup application.
+    /// </summary>
     public partial class Form1 : Form
     {
         private const string projectsFolder = @"E:\Adobe\PremierPro\";
@@ -19,6 +39,9 @@ namespace Premiere_Pro_Project_Setup
             Close();
         }
 
+        /// <summary>
+        /// Creates the project structure from a template.
+        /// </summary>
         private void CreateProjectStructureFromTemplate()
         {
             if (textBoxProjectName.Text.Trim().Length > 0)
@@ -40,6 +63,11 @@ namespace Premiere_Pro_Project_Setup
             }
         }
 
+        /// <summary>
+        /// Checks if the template folder exists and creates it if it doesn't.
+        /// </summary>
+        /// <param name="templateName">The name of the template folder.</param>
+        /// <returns>The DirectoryInfo object representing the template folder.</returns>
         private static DirectoryInfo CheckTemplate(string templateName)
         {
             DirectoryInfo templateInfo = new(Path.Combine(projectsFolder, templateName));
@@ -54,11 +82,12 @@ namespace Premiere_Pro_Project_Setup
                 if (!Directory.Exists(directoryName))
                 {
                     _ = Directory.CreateDirectory(directoryName);
-                }                
+                }
             }
             return templateInfo;
         }
-        private void TextBoxProjectName_KeyDown(object sender, KeyEventArgs e)
+
+        private void TextBoxProjectName_KeyDown(object? sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
