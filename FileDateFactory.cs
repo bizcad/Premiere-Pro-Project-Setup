@@ -1,4 +1,20 @@
-﻿using System.Text;
+﻿/*
+ * 
+ * This file is part of the Premiere Pro Project Setup project.
+ *
+ * Written by: Nicholas Stein
+ * Date: 2024-05-15
+ * 
+ * Purpose: This file contains the FileDateFactory class which 
+ * create a date string in the format YYYYMMDD[_HHMMSS] from a DateTime object.
+ * 
+ * Change log:
+ * 
+ * Date           Programmer          Change
+ * 2024-05-15   Nicholas Stein      Added the ProjectSubFoldersFactory class.
+ * 
+ */
+using System.Text;
 
 namespace Premiere_Pro_Project_Setup
 {

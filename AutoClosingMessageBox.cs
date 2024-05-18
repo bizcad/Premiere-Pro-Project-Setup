@@ -1,8 +1,27 @@
-﻿namespace Premiere_Pro_Project_Setup
+﻿/*
+ * 
+ * This file is part of the Premiere Pro Project Setup project.
+ *
+ * Written by: Nicholas Stein
+ * Date: 2024-05-15
+ * 
+ * Purpose: This file contains the AutoClosingMessageBox class, 
+ * which represents a message box that automatically closes after a specified timeout.
+ * 
+ * Change log:
+ * 
+ * Date           Programmer          Change
+ * 2024-05-15   Nicholas Stein      Added the ProjectSubFoldersFactory class.
+ * 
+ */
+using System.Diagnostics;
+
+namespace Premiere_Pro_Project_Setup
 {
     /// <summary>
     /// Represents a message box that automatically closes after a specified timeout.
     /// </summary>
+    [DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
     public partial class AutoClosingMessageBox : Form
     {
         readonly System.Windows.Forms.Timer _timeoutTimer;
@@ -60,5 +79,9 @@
             acmb.ShowDialog();
         }
 
+        private string GetDebuggerDisplay()
+        {
+            return ToString();
+        }
     }
 }

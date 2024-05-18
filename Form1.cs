@@ -59,6 +59,8 @@ namespace Premiere_Pro_Project_Setup
                 }
                 DirectoryInfo templateInfo = CheckTemplate("ProjectTemplate");
                 FolderCopier.CopyFolder(templateInfo.FullName, projectInfo.FullName);
+                FileRenamer projectRename = new(projectName);
+                projectRename.RenameProjectFiles(projectInfo);
                 AutoClosingMessageBox.Show("Project Created", "Success", 1000);
             }
         }
