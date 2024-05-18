@@ -1,17 +1,16 @@
 # Premiere Pro Project Setup
 
 This application helps in setting up a new project structure for Adobe Premiere Pro. 
-<p>Here's how it works:</p>
-<p>1. Enter the project name in the Project Name text input field.</p>
-<p>2. Click the Create button or the Enter Key</p>
-<p>3. The application creates a new set of project folders with the project name prefixed by the current date.  So even if you reuse the same project name the new project will be unqiue to the day.</p>
-<p>4. The application copies the contents of the ProjectTemplate folder to the new project folder.</p>
-<p>5. Any files in the ProjectTemplate folder are copied into the new project.
-- Your logo file into the graphics folder
-- Some default music for use while you are editing
-- Default project files. An Instagram project is included. 
-</p>
-<p>6. Any files in the ProjectTemplate folder with the _Default in the name they will be renamed replacing the _Default with the project name.</p>
+<em>Here's how it works:</em>
+1. Enter the project name in the Project Name text input field.
+2. Click the Create button or the Enter Key
+3. The application creates a new set of project folders with the project name prefixed by the current date.  So even if you reuse the same project name the new project will be unqiue to the day.
+4. The application copies the contents of the ProjectTemplate folder to the new project folder.
+5. Any files in the ProjectTemplate folder are copied into the new project.
+	- Your logo file into the graphics folder
+	- Some default music for use while you are editing
+	- Default project files. An Instagram project is included. 
+6. Any files in the ProjectTemplate folder with the _Default in the name they will be renamed replacing the _Default with the project name.
 
 ## Initialization
 
